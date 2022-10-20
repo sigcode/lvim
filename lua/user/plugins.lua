@@ -10,7 +10,7 @@ lvim.plugins = {
 	"christianchiarulli/harpoon",
 	"MattesGroeger/vim-bookmarks",
 	"NvChad/nvim-colorizer.lua",
-	"ghillb/cybu.nvim",
+	--"ghillb/cybu.nvim",
 	"moll/vim-bbye",
 	"folke/todo-comments.nvim",
 	"windwp/nvim-spectre",
@@ -34,6 +34,8 @@ lvim.plugins = {
 	"leoluz/nvim-dap-go",
 	"mfussenegger/nvim-dap-python",
 	"jose-elias-alvarez/typescript.nvim",
+	{ "junegunn/fzf" },
+	{ "junegunn/fzf.vim" },
 	"mxsdev/nvim-dap-vscode-js",
 	{
 		"saecki/crates.nvim",
@@ -57,7 +59,7 @@ lvim.plugins = {
 		end,
 	},
 	{ "christianchiarulli/telescope-tabs", branch = "chris" },
-	"monaqa/dial.nvim",
+	--"monaqa/dial.nvim",
 	{
 		"0x100101/lab.nvim",
 		run = "cd js && npm ci",
