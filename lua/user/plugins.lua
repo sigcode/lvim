@@ -25,7 +25,6 @@ lvim.plugins = {
 	"kevinhwang91/nvim-bqf",
 	"is0n/jaq-nvim",
 	"hrsh7th/cmp-emoji",
-	"ggandor/leap.nvim",
 	"nacro90/numb.nvim",
 	"TimUntersberger/neogit",
 	"sindrets/diffview.nvim",
