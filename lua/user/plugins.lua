@@ -31,6 +31,7 @@ lvim.plugins = {
 	"simrat39/rust-tools.nvim",
 	"olexsmir/gopher.nvim",
 	"leoluz/nvim-dap-go",
+	"ggandor/lightspeed.nvim",
 	"mfussenegger/nvim-dap-python",
 	"jose-elias-alvarez/typescript.nvim",
 	{ "junegunn/fzf" },
