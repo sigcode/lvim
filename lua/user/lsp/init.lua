@@ -22,7 +22,7 @@ local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
 	{ command = "google_java_format", filetypes = { "java" } },
 	{ command = "stylua", filetypes = { "lua" } },
-	{ command = "prettier", filetypes = { "javascript", "typescript", "jsx", "css", "scss" } },
+	{ command = "prettier", filetypes = { "javascript", "typescript", "jsx", "css", "scss", "rs" } },
 })
 
 -- lvim.lsp.on_attach_callback = function(client, bufnr)

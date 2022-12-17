@@ -8,6 +8,7 @@ lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
 lvim.builtin.which_key.mappings["f"] = { "<cmd>Telescope find_files<cr>", "File Search" }
 lvim.builtin.which_key.mappings["F"] = { "<cmd>:Rg<cr>", "Find Text" }
 lvim.builtin.which_key.mappings["t"] = { "<cmd>ToggleTerm<cr>", "Terminal" }
+lvim.builtin.which_key.mappings["i"] = { "<cmd>Legendary<cr>", "Legendary" }
 lvim.builtin.which_key.mappings["gy"] = "Link"
 lvim.builtin.which_key.mappings["r"] = {
 	name = "Replace",

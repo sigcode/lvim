@@ -2,14 +2,27 @@
 lvim.plugins = {
 	"nvim-treesitter/playground",
 	"nvim-treesitter/nvim-treesitter-textobjects",
+	"mrjones2014/legendary.nvim",
 	"mfussenegger/nvim-jdtls",
 	"karb94/neoscroll.nvim",
+	"stevearc/dressing.nvim",
 	"j-hui/fidget.nvim",
 	"windwp/nvim-ts-autotag",
 	"kylechui/nvim-surround",
 	"christianchiarulli/harpoon",
 	"MattesGroeger/vim-bookmarks",
-	"NvChad/nvim-colorizer.lua",
+	{
+		"NvChad/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup({
+				filetypes = {
+					"*", -- Highlight all files, but customize some others.
+					"!vim", -- Exclude vim from highlighting.
+					-- Exclusion Only makes sense if '*' is specified!
+				},
+			})
+		end,
+	},
 	--"ghillb/cybu.nvim",
 	"moll/vim-bbye",
 	"folke/todo-comments.nvim",
@@ -72,17 +85,30 @@ lvim.plugins = {
 			vim.defer_fn(function()
 				require("copilot").setup({
 					plugin_manager_path = os.getenv("LUNARVIM_RUNTIME_DIR") .. "/site/pack/packer",
+					suggestion = {
+						enabled = true,
+						auto_trigger = true,
+						debounce = 75,
+						keymap = {
+							accept = "<C-e>",
+							accept_word = false,
+							accept_line = false,
+							next = "<C-r>",
+							prev = "<C-w>",
+							dismiss = "<C-]>",
+						},
+					},
 				})
 			end, 100)
 		end,
 	},
-	{
-		"zbirenbaum/copilot-cmp",
-		after = { "copilot.lua" },
-		config = function()
-			require("copilot_cmp").setup()
-		end,
-	},
+	-- {
+	-- 	"zbirenbaum/copilot-cmp",
+	-- 	after = { "copilot.lua" },
+	-- 	config = function()
+	-- 		require("copilot_cmp").setup()
+	-- 	end,
+	-- },
 
 	-- https://github.com/jose-elias-alvarez/typescript.nvim
 	-- "rmagatti/auto-session",
