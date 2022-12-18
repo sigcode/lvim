@@ -10,13 +10,70 @@ lvim.builtin.breadcrumbs.active = true
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
 lvim.builtin.cmp.cmdline.enable = false
+lvim.builtin.cmp.completion.keyword_length = 3
+local kind_icons = {
+	Text = "",
+	Method = "m",
+	Function = "",
+	Constructor = "",
+	Field = "",
+	Variable = "",
+	Class = "",
+	Interface = "",
+	Module = "",
+	Property = "",
+	Unit = "",
+	Value = "",
+	Enum = "",
+	Keyword = "",
+	Snippet = "",
+	Color = "",
+	File = "",
+	Reference = "",
+	Folder = "",
+	EnumMember = "",
+	Constant = "",
+	Struct = "",
+	Event = "",
+	Operator = "",
+	TypeParameter = "",
+}
+lvim.builtin.cmp.formatting = {
+	format = function(entry, vim_item)
+		vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
+		vim_item.menu = ({
+			nvim_lsp = "[LSP]",
+			nvim_lua = "[Lua]",
+			buffer = "[BUF]",
+			path = "[PATH]",
+			calc = "[CALC]",
+			vsnip = "[VSNIP]",
+			tabnine = "[TABNINE]",
+			nvim_treesitter = "[TS]",
+			spell = "[SPELL]",
+			emoji = "[EMOJI]",
+		})[entry.source.name]
+		return vim_item
+	end,
+}
+lvim.builtin.cmp.window = {
+	completion = {
+		winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+		col_offset = -3,
+		side_padding = 0,
+	},
+	documentation = {
+		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+	},
+}
+
 vim.opt.showtabline = 1
 
 local options = {
 	backup = false, -- creates a backup file
 	clipboard = "unnamedplus", -- allows neovim to access the system clipboard
 	cmdheight = 1, -- more space in the neovim command line for displaying messages
-	completeopt = {}, -- mostly just for cmp
+	completeopt = { "menuone", "noselect" }, -- mostly just for cmp
 	conceallevel = 0, -- so that `` is visible in markdown files
 	fileencoding = "utf-8", -- the encoding written to a file
 	hlsearch = true, -- highlight all matches on previous search pattern

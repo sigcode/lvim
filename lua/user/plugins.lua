@@ -49,6 +49,7 @@ lvim.plugins = {
 	"jose-elias-alvarez/typescript.nvim",
 	{ "junegunn/fzf" },
 	{ "junegunn/fzf.vim" },
+	"onsails/lspkind.nvim",
 	"mxsdev/nvim-dap-vscode-js",
 	{
 		"saecki/crates.nvim",
