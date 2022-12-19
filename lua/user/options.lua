@@ -66,6 +66,18 @@ lvim.builtin.cmp.window = {
 		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
 	},
 }
+lvim.builtin.cmp.sources = {
+	{ name = "nvim_lsp" },
+	{ name = "nvim_lua" },
+	{ name = "buffer" },
+	{ name = "path" },
+	{ name = "calc" },
+	{ name = "vsnip" },
+	{ name = "tabnine" },
+	{ name = "nvim_treesitter" },
+	{ name = "spell" },
+	{ name = "emoji" },
+}
 
 vim.opt.showtabline = 1
 
