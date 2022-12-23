@@ -11,33 +11,23 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
 lvim.builtin.cmp.cmdline.enable = false
 lvim.builtin.cmp.completion.keyword_length = 3
-local kind_icons = {
-	Text = "",
-	Method = "m",
-	Function = "",
-	Constructor = "",
-	Field = "",
-	Variable = "",
-	Class = "",
-	Interface = "",
-	Module = "",
-	Property = "",
-	Unit = "",
-	Value = "",
-	Enum = "",
-	Keyword = "",
-	Snippet = "",
-	Color = "",
-	File = "",
-	Reference = "",
-	Folder = "",
-	EnumMember = "",
-	Constant = "",
-	Struct = "",
-	Event = "",
-	Operator = "",
-	TypeParameter = "",
+lvim.builtin.cmp.window.completion = {
+	border = "rounded",
+	winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
 }
+-- lvim.builtin.cmp.formatting.source_names = {
+-- 	nvim_lsp = "",
+-- 	emoji = "",
+-- 	path = "",
+-- 	calc = "",
+-- 	cmp_tabnine = "",
+-- 	vsnip = "",
+-- 	luasnip = "",
+-- 	buffer = "",
+-- 	tmux = "",
+-- 	copilot = "",
+-- 	treesitter = "",
+-- }
 lvim.builtin.cmp.formatting = {
 	format = function(entry, vim_item)
 		vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
@@ -56,16 +46,16 @@ lvim.builtin.cmp.formatting = {
 		return vim_item
 	end,
 }
-lvim.builtin.cmp.window = {
-	completion = {
-		winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-		col_offset = -3,
-		side_padding = 0,
-	},
-	documentation = {
-		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-	},
-}
+-- lvim.builtin.cmp.window = {
+-- 	completion = {
+-- 		winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+-- 		col_offset = -3,
+-- 		side_padding = 0,
+-- 	},
+-- 	documentation = {
+-- 		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+-- 	},
+-- }
 lvim.builtin.cmp.sources = {
 	{ name = "nvim_lsp" },
 	{ name = "nvim_lua" },
@@ -91,7 +81,7 @@ local options = {
 	hlsearch = true, -- highlight all matches on previous search pattern
 	ignorecase = true, -- ignore case in search patterns
 	mouse = "a", -- allow the mouse to be used in neovim
-	pumheight = 10, -- pop up menu height
+	pumheight = 20, -- pop up menu height
 	showmode = true, -- we don't need to see things like -- INSERT -- anymore
 	showtabline = 1, -- always show tabs
 	smartcase = true, -- smart case
