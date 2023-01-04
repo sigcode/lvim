@@ -107,11 +107,13 @@ local options = {
 	signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
 	wrap = false, -- display lines as one long line
 	scrolloff = 0,
+	hidden = true,
 	sidescrolloff = 8,
 	--guifont = "monospace:h17", -- the font used in graphical neovim applications
 	title = true,
 	-- colorcolumn = "80",
 	-- colorcolumn = "120",
+	orcolumn = "120",
 }
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
@@ -138,3 +140,5 @@ vim.filetype.add({
 		conf = "dosini",
 	},
 })
+
+vim.cmd("autocmd TermEnter term://*toggleterm#* tnoremap <silent><c-t> <Cmd>exe v:count1 . 'ToggleTerm'<CR>")
