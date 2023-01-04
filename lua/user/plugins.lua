@@ -7,7 +7,32 @@ lvim.plugins = {
 	"karb94/neoscroll.nvim",
 	"stevearc/dressing.nvim",
 	"j-hui/fidget.nvim",
-	"windwp/nvim-ts-autotag",
+	{
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	},
+	-- {
+	-- 	"echasnovski/mini.nvim",
+	-- 	config = function()
+	-- 		require("mini.animate").setup()
+	-- 	end,
+	-- },
+	{
+		"dense-analysis/neural",
+		config = function()
+			require("neural").setup({
+				open_ai = {
+					api_key = "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",
+				},
+			})
+		end,
+		requires = {
+			"MunifTanjim/nui.nvim",
+			"ElPiloto/significant.nvim",
+		},
+	},
 	"kylechui/nvim-surround",
 	"christianchiarulli/harpoon",
 	"MattesGroeger/vim-bookmarks",
