@@ -48,6 +48,13 @@ lvim.plugins = {
 			})
 		end,
 	},
+	{
+
+		url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		config = function()
+			require("lsp_lines").setup()
+		end,
+	},
 	--"ghillb/cybu.nvim",
 	"moll/vim-bbye",
 	"folke/todo-comments.nvim",
