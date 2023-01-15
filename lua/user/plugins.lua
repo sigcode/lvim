@@ -19,20 +19,20 @@ lvim.plugins = {
 	-- 		require("mini.animate").setup()
 	-- 	end,
 	-- },
-	{
-		"dense-analysis/neural",
-		config = function()
-			require("neural").setup({
-				open_ai = {
-					api_key = "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",
-				},
-			})
-		end,
-		requires = {
-			"MunifTanjim/nui.nvim",
-			"ElPiloto/significant.nvim",
-		},
-	},
+	-- {
+	--     "dense-analysis/neural",
+	--     config = function()
+	--         require("neural").setup({
+	--             open_ai = {
+	--                 api_key = "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",
+	--             },
+	--         })
+	--     end,
+	--     dependencies = {
+	--         "MunifTanjim/nui.nvim",
+	--         "ElPiloto/significant.nvim",
+	--     },
+	-- },
 	"kylechui/nvim-surround",
 	"christianchiarulli/harpoon",
 	"MattesGroeger/vim-bookmarks",
@@ -78,8 +78,8 @@ lvim.plugins = {
 	"mxsdev/nvim-dap-vscode-js",
 	{
 		"saecki/crates.nvim",
-		tag = "v0.3.0",
-		requires = { "nvim-lua/plenary.nvim" },
+		version = "v0.3.0",
+		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			require("crates").setup({
 				null_ls = {
@@ -101,9 +101,9 @@ lvim.plugins = {
 	--"monaqa/dial.nvim",
 	{
 		"0x100101/lab.nvim",
-		run = "cd js && npm ci",
+		build = "cd js && npm ci",
 	},
-	{ "tzachar/cmp-tabnine", run = "./install.sh" },
+	{ "tzachar/cmp-tabnine", build = "./install.sh" },
 	{
 		"zbirenbaum/copilot.lua",
 		event = { "VimEnter" },
