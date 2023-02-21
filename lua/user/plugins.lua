@@ -13,6 +13,15 @@ lvim.plugins = {
 			require("nvim-ts-autotag").setup()
 		end,
 	},
+	{
+		"tzachar/local-highlight.nvim",
+		config = function()
+			require("local-highlight").setup({
+				file_types = { "php", "javascript", "typescript", "js", "ts" },
+				hlgroup = "TSDefinitionUsage",
+			})
+		end,
+	},
 	-- {
 	-- 	"echasnovski/mini.nvim",
 	-- 	config = function()
@@ -49,6 +58,14 @@ lvim.plugins = {
 		end,
 	},
 	{
+		"phaazon/hop.nvim",
+		branch = "v2", -- optional but strongly recommended
+		config = function()
+			-- you can configure Hop the way you like here; see :h hop-config
+			require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+		end,
+	},
+	{
 
 		url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 		config = function()
@@ -76,7 +93,6 @@ lvim.plugins = {
 	"simrat39/rust-tools.nvim",
 	"olexsmir/gopher.nvim",
 	"leoluz/nvim-dap-go",
-	"ggandor/lightspeed.nvim",
 	"mfussenegger/nvim-dap-python",
 	"jose-elias-alvarez/typescript.nvim",
 	{ "junegunn/fzf" },
