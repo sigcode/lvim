@@ -4,6 +4,7 @@ lvim.builtin.illuminate.active = true
 lvim.builtin.bufferline.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
+lvim.reload_config_on_save = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.breadcrumbs.active = true
@@ -20,7 +21,9 @@ vim.diagnostic.config({
 		only_current_line = true,
 	},
 })
+lvim.builtin.bufferline.active = true
 vim.opt.softtabstop = 4
+lvim.builtin.lualine.active = false
 lvim.builtin.cmp.completion.keyword_length = 3
 lvim.builtin.cmp.window.completion = {
 	border = "rounded",

@@ -5,8 +5,15 @@ lvim.plugins = {
 	"mrjones2014/legendary.nvim",
 	"mfussenegger/nvim-jdtls",
 	"karb94/neoscroll.nvim",
+	"roobert/tailwindcss-colorizer-cmp.nvim",
 	"stevearc/dressing.nvim",
 	"j-hui/fidget.nvim",
+	{
+		"feline-nvim/feline.nvim",
+		config = function()
+			require("feline").setup()
+		end,
+	},
 	{
 		"windwp/nvim-ts-autotag",
 		config = function()
@@ -77,7 +84,7 @@ lvim.plugins = {
 	"folke/todo-comments.nvim",
 	"windwp/nvim-spectre",
 	"f-person/git-blame.nvim",
-	"ruifm/gitlinker.nvim",
+	-- "ruifm/gitlinker.nvim",
 	"mattn/vim-gist",
 	"mattn/webapi-vim",
 	"folke/zen-mode.nvim",
@@ -91,9 +98,9 @@ lvim.plugins = {
 	"TimUntersberger/neogit",
 	"sindrets/diffview.nvim",
 	"simrat39/rust-tools.nvim",
-	"olexsmir/gopher.nvim",
-	"leoluz/nvim-dap-go",
-	"mfussenegger/nvim-dap-python",
+	-- "olexsmir/gopher.nvim",
+	-- "leoluz/nvim-dap-go",
+	-- "mfussenegger/nvim-dap-python",
 	"jose-elias-alvarez/typescript.nvim",
 	{ "junegunn/fzf" },
 	{ "junegunn/fzf.vim" },
