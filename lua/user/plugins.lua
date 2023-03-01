@@ -5,15 +5,16 @@ lvim.plugins = {
 	"mrjones2014/legendary.nvim",
 	"mfussenegger/nvim-jdtls",
 	"karb94/neoscroll.nvim",
+    'jwalton512/vim-blade',
 	"roobert/tailwindcss-colorizer-cmp.nvim",
 	"stevearc/dressing.nvim",
 	"j-hui/fidget.nvim",
-	{
-		"feline-nvim/feline.nvim",
-		config = function()
-			require("feline").setup()
-		end,
-	},
+	-- {
+	-- 	"feline-nvim/feline.nvim",
+	-- 	config = function()
+	-- 		require("feline").setup()
+	-- 	end,
+	-- },
 	{
 		"windwp/nvim-ts-autotag",
 		config = function()
