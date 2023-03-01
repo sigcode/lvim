@@ -11,9 +11,9 @@ lvim.plugins = {
     "j-hui/fidget.nvim",
     {
         "feline-nvim/feline.nvim",
-        config = function()
-            require("feline").setup()
-        end,
+        -- config = function()
+        --     require("feline").setup()
+        -- end,
     },
     {
         "windwp/nvim-ts-autotag",
@@ -30,6 +30,10 @@ lvim.plugins = {
             })
         end,
     },
+    { 'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end },
     -- {
     -- 	"echasnovski/mini.nvim",
     -- 	config = function()

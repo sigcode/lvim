@@ -1,5 +1,6 @@
 reload("user.plugins")
 reload("user.options")
+reload("user.feline")
 reload("user.keymaps")
 reload("user.autocommands")
 reload("user.lsp")
@@ -23,7 +24,3 @@ reload("user.numb")
 reload("user.treesitter")
 reload("user.neogit")
 reload("user.colorizer")
-reload("user.feline")
-
-
-
