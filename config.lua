@@ -1,6 +1,6 @@
 reload("user.plugins")
 reload("user.options")
-reload("user.winbar")
+-- reload("user.winbar")
 reload("user.keymaps")
 reload("user.autocommands")
 reload("user.lsp")
