@@ -9,12 +9,16 @@ lvim.plugins = {
     "roobert/tailwindcss-colorizer-cmp.nvim",
     "stevearc/dressing.nvim",
     "j-hui/fidget.nvim",
+    "SmiteshP/nvim-navic",
     {
-        "feline-nvim/feline.nvim",
-        -- config = function()
-        --     require("feline").setup()
-        -- end,
+        "fgheng/winbar.nvim",
     },
+    -- {
+    --     "feline-nvim/feline.nvim",
+    --     -- config = function()
+    --     --     require("feline").setup()
+    --     -- end,
+    -- },
     {
         "windwp/nvim-ts-autotag",
         config = function()

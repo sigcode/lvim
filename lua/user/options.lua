@@ -23,9 +23,32 @@ vim.diagnostic.config({
         only_current_line = true,
     },
 })
+local function status_line()
+    local mode = "%-5{%v:lua.string.upper(v:lua.vim.fn.mode())%}"
+    local file_name = "%-.16t"
+    local buf_nr = "[%n]"
+    local modified = " %-m"
+    local file_type = " %y"
+    local right_align = "%="
+    local line_no = "%10([%l/%L%)]"
+    local pct_thru_file = "%5p%%"
+
+    return string.format(
+        "%s%s%s%s%s%s%s%s",
+        mode,
+        file_name,
+        buf_nr,
+        modified,
+        file_type,
+        right_align,
+        line_no,
+        pct_thru_file
+    )
+end
+vim.opt.winbar = status_line()
 lvim.builtin.bufferline.active = true
 vim.opt.softtabstop = 4
-lvim.builtin.lualine.active = false
+lvim.builtin.lualine.active = true
 lvim.builtin.cmp.completion.keyword_length = 3
 lvim.builtin.cmp.window.completion = {
     border = "rounded",
