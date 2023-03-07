@@ -20,11 +20,7 @@ keymap("n", "<m-tab>", "<c-6>", opts)
 keymap("n", "<C-t>", "<cmd>exe v:count1. 'ToggleTerm'<cr>", opts)
 keymap("i", "<C-t>", "<Esc><cmd>exe v:count1. 'ToggleTerm'<cr>", opts)
 keymap("t", "<C-t>", "<c-\\><c-n><c-w>l<cr>", opts)
--- Tabs --
--- keymap("n", "\\", ":tabnew %<cr>", opts)
--- keymap("n", "\\", ":tabnew %<cr>", opts)
--- keymap("n", "<s-\\>", ":tabclose<cr>", opts)
--- keymap("n", "<s-\\>", ":tabonly<cr>", opts)
+-- Hop --
 keymap("n", "f", ":HopChar1CurrentLineAC<cr>", opts)
 keymap("n", "F", ":HopChar1CurrentLineBC<cr>", opts)
 -- Resize with arrows

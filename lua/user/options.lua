@@ -7,7 +7,7 @@ lvim.builtin.terminal.active = true
 lvim.reload_config_on_save = true
 lvim.format_on_save = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 lvim.builtin.breadcrumbs.active = true
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
@@ -23,29 +23,6 @@ vim.diagnostic.config({
 		only_current_line = true,
 	},
 })
-local function status_line()
-	local mode = "%-5{%v:lua.string.upper(v:lua.vim.fn.mode())%}"
-	local file_name = "%-.16t"
-	local buf_nr = "[%n]"
-	local modified = " %-m"
-	local file_type = " %y"
-	local right_align = "%="
-	local line_no = "%10([%l/%L%)]"
-	local pct_thru_file = "%5p%%"
-
-	return string.format(
-		"%s%s%s%s%s%s%s%s",
-		mode,
-		file_name,
-		buf_nr,
-		modified,
-		file_type,
-		right_align,
-		line_no,
-		pct_thru_file
-	)
-end
---vim.opt.winbar = status_line()
 lvim.builtin.bufferline.active = true
 vim.opt.softtabstop = 4
 lvim.builtin.lualine.active = false
@@ -92,37 +69,6 @@ lvim.builtin.cmp.mapping.preset.insert({
 	end, { "i", "s" }),
 })
 
--- lvim.builtin.cmp.formatting.source_names = {
--- 	nvim_lsp = "",
--- 	emoji = "",
--- 	path = "",
--- 	calc = "",
--- 	cmp_tabnine = "",
--- 	vsnip = "",
--- 	luasnip = "",
--- 	buffer = "",
--- 	tmux = "",
--- 	copilot = "",
--- 	treesitter = "",
--- }
--- lvim.builtin.cmp.formatting = {
---     format = function(entry, vim_item)
---         vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
---         vim_item.menu = ({
---                 nvim_lsp = "[LSP]",
---                 nvim_lua = "[Lua]",
---                 buffer = "[BUF]",
---                 path = "[PATH]",
---                 calc = "[CALC]",
---                 vsnip = "[VSNIP]",
---                 tabnine = "[TABNINE]",
---                 nvim_treesitter = "[TS]",
---                 spell = "[SPELL]",
---                 emoji = "[EMOJI]",
---             })[entry.source.name]
---         return vim_item
---     end,
--- }
 lvim.builtin.cmp.sources = {
 	{ name = "nvim_lsp" },
 	{ name = "nvim_lua" },
@@ -136,7 +82,7 @@ lvim.builtin.cmp.sources = {
 	{ name = "emoji" },
 }
 
-vim.opt.showtabline = 1
+vim.opt.showtabline = 0
 
 local options = {
 	backup = false, -- creates a backup file
