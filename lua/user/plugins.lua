@@ -9,6 +9,22 @@ lvim.plugins = {
 	"roobert/tailwindcss-colorizer-cmp.nvim",
 	"stevearc/dressing.nvim",
 	"j-hui/fidget.nvim",
+	{
+		"HiPhish/nvim-ts-rainbow2",
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				rainbow = {
+					enable = true,
+					-- list of languages you want to disable the plugin for
+					-- Which query to use for finding delimiters
+					query = "rainbow-parens",
+					-- Highlight the entire buffer all at once
+					strategy = require("ts-rainbow.strategy.global"),
+				},
+			})
+		end,
+	},
+
 	"SmiteshP/nvim-navic",
 	{
 		"feline-nvim/feline.nvim",
