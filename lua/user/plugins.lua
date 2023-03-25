@@ -101,7 +101,6 @@ lvim.plugins = {
 	"nacro90/numb.nvim",
 	"TimUntersberger/neogit",
 	"sindrets/diffview.nvim",
-	"simrat39/rust-tools.nvim",
 	-- "olexsmir/gopher.nvim",
 	-- "leoluz/nvim-dap-go",
 	-- "mfussenegger/nvim-dap-python",
