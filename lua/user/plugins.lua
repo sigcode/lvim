@@ -8,30 +8,31 @@ lvim.plugins = {
 	"jwalton512/vim-blade",
 	"roobert/tailwindcss-colorizer-cmp.nvim",
 	"stevearc/dressing.nvim",
+	"christoomey/vim-tmux-navigator",
 	"j-hui/fidget.nvim",
-	{
-		"HiPhish/nvim-ts-rainbow2",
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				rainbow = {
-					enable = true,
-					-- list of languages you want to disable the plugin for
-					-- Which query to use for finding delimiters
-					query = "rainbow-parens",
-					-- Highlight the entire buffer all at once
-					strategy = require("ts-rainbow.strategy.global"),
-				},
-			})
-		end,
-	},
+	-- {
+	-- 	"HiPhish/nvim-ts-rainbow2",
+	-- 	config = function()
+	-- 		require("nvim-treesitter.configs").setup({
+	-- 			rainbow = {
+	-- 				enable = true,
+	-- 				-- list of languages you want to disable the plugin for
+	-- 				-- Which query to use for finding delimiters
+	-- 				query = "rainbow-parens",
+	-- 				-- Highlight the entire buffer all at once
+	-- 				strategy = require("ts-rainbow.strategy.global"),
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 
-	"SmiteshP/nvim-navic",
-	{
-		"feline-nvim/feline.nvim",
-		config = function()
-			require("feline").setup()
-		end,
-	},
+	-- "SmiteshP/nvim-navic",
+	-- {
+	--     "feline-nvim/feline.nvim",
+	--     config = function()
+	--         require("feline").setup()
+	--     end,
+	-- },
 	{
 		"windwp/nvim-ts-autotag",
 		config = function()
@@ -77,7 +78,6 @@ lvim.plugins = {
 		end,
 	},
 	{
-
 		url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 		config = function()
 			require("lsp_lines").setup()
