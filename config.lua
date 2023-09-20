@@ -40,3 +40,7 @@ formatters.setup({
 		filetypes = { "typescript", "typescriptreact", "css", "scss", "js", "ts" },
 	},
 })
+-- require("mini.cursorword").setup()
+-- require("mini.jump").setup()
+-- require("mini.indentscope").setup()
+require("leap").add_default_mappings()

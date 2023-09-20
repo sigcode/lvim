@@ -7,9 +7,10 @@ lvim.plugins = {
 	"karb94/neoscroll.nvim",
 	"jwalton512/vim-blade",
 	"roobert/tailwindcss-colorizer-cmp.nvim",
+	{ "echasnovski/mini.nvim", version = false },
 	"stevearc/dressing.nvim",
 	"christoomey/vim-tmux-navigator",
-	"j-hui/fidget.nvim",
+	-- "j-hui/fidget.nvim",
 	-- {
 	-- 	"HiPhish/nvim-ts-rainbow2",
 	-- 	config = function()
@@ -101,6 +102,7 @@ lvim.plugins = {
 	"nacro90/numb.nvim",
 	"TimUntersberger/neogit",
 	"sindrets/diffview.nvim",
+	"ggandor/leap.nvim",
 	-- "olexsmir/gopher.nvim",
 	-- "leoluz/nvim-dap-go",
 	-- "mfussenegger/nvim-dap-python",
