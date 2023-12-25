@@ -26,6 +26,7 @@ vim.diagnostic.config({
 lvim.builtin.bufferline.active = true
 vim.opt.softtabstop = 4
 lvim.builtin.lualine.active = true
+lvim.builtin.lualine.style = "default"
 lvim.builtin.cmp.completion.keyword_length = 3
 lvim.builtin.cmp.window.completion = {
 	border = "rounded",
